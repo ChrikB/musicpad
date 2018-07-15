@@ -337,119 +337,119 @@ function MusicPad(targetEl, MenuWrapper) {
 		{ name: 'quarter_flat'       , svg: { vb: { w: 20, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 23 , unicode: '&#x1D133;' } } 
 	  ],
 	  dynamics: [ 
-		{ name: 'rinforzando'        , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18C;'                  } } , 
-		{ name: 'subito'             , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18D;'                  } } , 
-		{ name: 'zed'                , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18E;'                  } } , 
-		{ name: 'piano'              , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;'                  } } , 
-		{ name: 'pianissimo'         , svg: { vb: { w: 32, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;&#x1D18F;'         } } , 
-		{ name: 'pianississimo'      , svg: { vb: { w: 44, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;&#x1D18F;&#x1D18F;'} } , 
-		{ name: 'mezzo_piano'        , svg: { vb: { w: 32, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D190;&#x1D18F;'         } } , 
-		{ name: 'mezzo'              , svg: { vb: { w: 20, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D190;'                  } } ,                
-		{ name: 'mezzo_forte'        , svg: { vb: { w: 32, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 18, unicode: '&#x1D190;&#x1D191;'         } } , 
-		{ name: 'forte'              , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;'                  } } , 
-		{ name: 'fortissimo'         , svg: { vb: { w: 35, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;&#x1D191;'         } } , 
-		{ name: 'fortississimo'      , svg: { vb: { w: 48, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;&#x1D191;&#x1D191;'} } , 
-		{ name: 'crescendo'          , svg: { vb: { w: 28, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D192;'                  } } , 
-		{ name: 'decrescendo'        , svg: { vb: { w: 28, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D193;'                  } } 
+	    { name: 'rinforzando'        , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18C;'                  } } , 
+	    { name: 'subito'             , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18D;'                  } } , 
+	    { name: 'zed'                , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18E;'                  } } , 
+	    { name: 'piano'              , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;'                  } } , 
+	    { name: 'pianissimo'         , svg: { vb: { w: 32, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;&#x1D18F;'         } } , 
+	    { name: 'pianississimo'      , svg: { vb: { w: 44, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D18F;&#x1D18F;&#x1D18F;'} } , 
+	    { name: 'mezzo_piano'        , svg: { vb: { w: 32, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D190;&#x1D18F;'         } } , 
+	    { name: 'mezzo'              , svg: { vb: { w: 20, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D190;'                  } } ,                
+	    { name: 'mezzo_forte'        , svg: { vb: { w: 32, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 18, unicode: '&#x1D190;&#x1D191;'         } } , 
+	    { name: 'forte'              , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;'                  } } , 
+	    { name: 'fortissimo'         , svg: { vb: { w: 35, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;&#x1D191;'         } } , 
+	    { name: 'fortississimo'      , svg: { vb: { w: 48, h: 25, x: 0, y: 0 } } , text: { x: 6, y: 18, unicode: '&#x1D191;&#x1D191;&#x1D191;'} } , 
+	    { name: 'crescendo'          , svg: { vb: { w: 28, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D192;'                  } } , 
+	    { name: 'decrescendo'        , svg: { vb: { w: 28, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D193;'                  } } 
 	  ],
 	  ornaments: [                                                           
-		{ name: 'grace'              , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D195;' } } , 
-		{ name: 'grace_slash'        , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D194;' } } , 
-		{ name: 'trill'              , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D196;' } } , 
-		{ name: 'turn'               , svg: { vb: { w: 25, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D197;' } } , 
-		{ name: 'turn_invert'        , svg: { vb: { w: 25, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D198;' } } , 
-		{ name: 'turn_slash'         , svg: { vb: { w: 25, h: 22, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D199;' } } , 
-		{ name: 'turn_up'            , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D19A;' } } , 
-		{ name: 'stroke_one'         , svg: { vb: { w: 15, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D19B;' } } , 
-		{ name: 'stroke_two'         , svg: { vb: { w: 18, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D19C;' } } ,
-		{ name: 'stroke_three'       , svg: { vb: { w: 23, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D19D;' } } , 
-		{ name: 'stroke_six'         , svg: { vb: { w: 23, h: 20, x: 0, y: 0 } } , text: { x: 15, y: 15 , unicode: '&#x1D19E;' } } 
+	    { name: 'grace'              , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D195;' } } , 
+	    { name: 'grace_slash'        , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D194;' } } , 
+	    { name: 'trill'              , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D196;' } } , 
+	    { name: 'turn'               , svg: { vb: { w: 25, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D197;' } } , 
+	    { name: 'turn_invert'        , svg: { vb: { w: 25, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D198;' } } , 
+	    { name: 'turn_slash'         , svg: { vb: { w: 25, h: 22, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D199;' } } , 
+	    { name: 'turn_up'            , svg: { vb: { w: 17, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D19A;' } } , 
+	    { name: 'stroke_one'         , svg: { vb: { w: 15, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D19B;' } } , 
+	    { name: 'stroke_two'         , svg: { vb: { w: 18, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D19C;' } } ,
+	    { name: 'stroke_three'       , svg: { vb: { w: 23, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 16, unicode: '&#x1D19D;' } } , 
+	    { name: 'stroke_six'         , svg: { vb: { w: 23, h: 20, x: 0, y: 0 } } , text: { x: 15, y: 15 , unicode: '&#x1D19E;' } } 
 	  ],
 	  articulation: [ 
-		{ name: 'accent'             , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D17B;' } } , 
-		{ name: 'staccato'           , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 5, y: 10, unicode: '&#x1D17C;' } } , 
-		{ name: 'tenuto'             , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 8 , unicode: '&#x1D17D;' } } ,
-		{ name: 'staccatissimo'      , svg: { vb: { w: 13, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 14, unicode: '&#x1D17E;' } } , 
-		{ name: 'marcato'            , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D17F;' } } ,
-		{ name: 'marcato_staccato'   , svg: { vb: { w: 15, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D180;' } } ,
-		{ name: 'accent_staccato'    , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D181;' } } ,
-		{ name: 'loure'              , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D182;' } } ,
-		{ name: 'arpeggiato_up'      , svg: { vb: { w: 16, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 53, unicode: '&#x1D183;' } } ,
-		{ name: 'arpeggiato_down'    , svg: { vb: { w: 16, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 55, unicode: '&#x1D184;' } } ,
-		{ name: 'doit'               , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D185;' } } , 
-		{ name: 'rip'                , svg: { vb: { w: 18, h: 18, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D186;' } } ,
-		{ name: 'flip'               , svg: { vb: { w: 18, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D187;' } } , 
-		{ name: 'smear'              , svg: { vb: { w: 20, h: 18, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D188;' } } ,
-		{ name: 'bend'               , svg: { vb: { w: 22, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D189;' } } ,
-		{ name: 'double_tongue'      , svg: { vb: { w: 22, h: 22, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D18A;' } } , 
-		{ name: 'triple_tongue'      , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D18B;' } }  
+	    { name: 'accent'             , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D17B;' } } , 
+	    { name: 'staccato'           , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 5, y: 10, unicode: '&#x1D17C;' } } , 
+	    { name: 'tenuto'             , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 8 , unicode: '&#x1D17D;' } } ,
+	    { name: 'staccatissimo'      , svg: { vb: { w: 13, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 14, unicode: '&#x1D17E;' } } , 
+	    { name: 'marcato'            , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D17F;' } } ,
+	    { name: 'marcato_staccato'   , svg: { vb: { w: 15, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D180;' } } ,
+	    { name: 'accent_staccato'    , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D181;' } } ,
+	    { name: 'loure'              , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D182;' } } ,
+	    { name: 'arpeggiato_up'      , svg: { vb: { w: 16, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 53, unicode: '&#x1D183;' } } ,
+	    { name: 'arpeggiato_down'    , svg: { vb: { w: 16, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 55, unicode: '&#x1D184;' } } ,
+	    { name: 'doit'               , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D185;' } } , 
+	    { name: 'rip'                , svg: { vb: { w: 18, h: 18, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D186;' } } ,
+	    { name: 'flip'               , svg: { vb: { w: 18, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D187;' } } , 
+	    { name: 'smear'              , svg: { vb: { w: 20, h: 18, x: 0, y: 0 } } , text: { x: 3, y: 12, unicode: '&#x1D188;' } } ,
+	    { name: 'bend'               , svg: { vb: { w: 22, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D189;' } } ,
+	    { name: 'double_tongue'      , svg: { vb: { w: 22, h: 22, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D18A;' } } , 
+	    { name: 'triple_tongue'      , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D18B;' } }  
 	  ],
 	  lines: [
-        { name: 'single_bar'         , svg: { vb: { w: 10, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D100;' }  } , 
-		{ name: 'double_bar'         , svg: { vb: { w: 13, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D101;' }  } , 
-		{ name: 'final_bar'          , svg: { vb: { w: 15, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D102;' }  } , 
-		{ name: 'rev_final_bar'      , svg: { vb: { w: 15, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D103;' }  } , 
-		{ name: 'dashed_bar'         , svg: { vb: { w: 10, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D104;' }  } , 
-		{ name: 'short_bar'          , svg: { vb: { w: 10, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D105;' }  } , 
-		{ name: 'left_repeat'        , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D106;' }  } ,
-		{ name: 'right_repeat'       , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D107;' }  } , 
-		{ name: 'brace'              , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D114;' }  } ,
-		{ name: 'bracket'            , svg: { vb: { w: 20, h: 56, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D115;' }  } , 
-		{ name: 'one_line'           , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D116;' }  } , 
-		{ name: 'two_line'           , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D117;' }  } , 
-		{ name: 'three_line'         , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D118;' }  } , 
-		{ name: 'four_line'          , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D119;' }  } , 
-		{ name: 'five_line'          , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D11A;' }  } 
+            { name: 'single_bar'         , svg: { vb: { w: 10, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D100;' }  } , 
+	    { name: 'double_bar'         , svg: { vb: { w: 13, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D101;' }  } , 
+	    { name: 'final_bar'          , svg: { vb: { w: 15, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D102;' }  } , 
+	    { name: 'rev_final_bar'      , svg: { vb: { w: 15, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D103;' }  } , 
+	    { name: 'dashed_bar'         , svg: { vb: { w: 10, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D104;' }  } , 
+	    { name: 'short_bar'          , svg: { vb: { w: 10, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D105;' }  } , 
+	    { name: 'left_repeat'        , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D106;' }  } ,
+	    { name: 'right_repeat'       , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D107;' }  } , 
+	    { name: 'brace'              , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D114;' }  } ,
+	    { name: 'bracket'            , svg: { vb: { w: 20, h: 56, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D115;' }  } , 
+	    { name: 'one_line'           , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D116;' }  } , 
+	    { name: 'two_line'           , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D117;' }  } , 
+	    { name: 'three_line'         , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D118;' }  } , 
+	    { name: 'four_line'          , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D119;' }  } , 
+	    { name: 'five_line'          , svg: { vb: { w: 20, h: 50, x: 0, y: 0 } } , text: { x: 0, y: 45, unicode: '&#x1D11A;' }  } 
 	  ],
 	  clefs: [ 
-        { name: 'g_clef'             , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D11E;'           } } , 
-        { name: 'g_clef_alto'        , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 50, unicode: '&#x1D11F;'           } } , 
-        { name: 'g_clef_bassa'       , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D120;'           } } , 
-        { name: 'c_clef'             , svg: { vb: { w: 30, h: 50, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D121;'           } } , 
-        { name: 'f_clef'             , svg: { vb: { w: 30, h: 40, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D122;'           } } , 
-        { name: 'f_clef_alta'        , svg: { vb: { w: 30, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D124;'           } } ,
-        { name: 'f_clef_bassa'       , svg: { vb: { w: 30, h: 70, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D123'            } } , 
-        { name: 'natural_clef'       , svg: { vb: { w: 42, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 23, unicode: '&#x1D125; &#x1D126;' } } ,
-        { name: 't'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'T'}                   } ,
-        { name: 'a'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'A'}                   } ,
-        { name: 'b'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'B'}                   }
+            { name: 'g_clef'             , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D11E;'           } } , 
+            { name: 'g_clef_alto'        , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 50, unicode: '&#x1D11F;'           } } , 
+            { name: 'g_clef_bassa'       , svg: { vb: { w: 30, h: 75, x: 0, y: 0 } } , text: { x: 3, y: 40, unicode: '&#x1D120;'           } } , 
+            { name: 'c_clef'             , svg: { vb: { w: 30, h: 50, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D121;'           } } , 
+            { name: 'f_clef'             , svg: { vb: { w: 30, h: 40, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D122;'           } } , 
+            { name: 'f_clef_alta'        , svg: { vb: { w: 30, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D124;'           } } ,
+            { name: 'f_clef_bassa'       , svg: { vb: { w: 30, h: 70, x: 0, y: 0 } } , text: { x: 3, y: 45, unicode: '&#x1D123'            } } , 
+            { name: 'natural_clef'       , svg: { vb: { w: 42, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 23, unicode: '&#x1D125; &#x1D126;' } } ,
+            { name: 't'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'T'}                   } ,
+            { name: 'a'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'A'}                   } ,
+            { name: 'b'                  , svg: { vb: { w: 20, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 17, letter: 'B'}                   }
 	  ],
 	  times: [ 
-		{ name: 'common_time'        , svg: { vb: { w: 22, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D134;' } }, 
-		{ name: 'cut_time'           , svg: { vb: { w: 22, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D135;' } } 
+	    { name: 'common_time'        , svg: { vb: { w: 22, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D134;' } }, 
+	    { name: 'cut_time'           , svg: { vb: { w: 22, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D135;' } } 
 	  ],
 	  repetition: [
-        { name: 'dal_segno'          , svg: { vb: { w: 45, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D109;' } }, 
-		{ name: 'da_capo'            , svg: { vb: { w: 45, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D10A;' } }, 
-		{ name: 'segno'              , svg: { vb: { w: 25, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 30, unicode: '&#x1D10B;' } }, 
-		{ name: 'coda'               , svg: { vb: { w: 40, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 35, unicode: '&#x1D10C;' } }, 
-		{ name: 'figure_one'         , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 13, unicode: '&#x1D10D;' } }, 
-		{ name: 'figure_two'         , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D10E;' } }, 
-		{ name: 'figure_three'       , svg: { vb: { w: 35, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D10F;' } }  
+            { name: 'dal_segno'          , svg: { vb: { w: 45, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D109;' } }, 
+	    { name: 'da_capo'            , svg: { vb: { w: 45, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D10A;' } }, 
+	    { name: 'segno'              , svg: { vb: { w: 25, h: 35, x: 0, y: 0 } } , text: { x: 3, y: 30, unicode: '&#x1D10B;' } }, 
+	    { name: 'coda'               , svg: { vb: { w: 40, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 35, unicode: '&#x1D10C;' } }, 
+	    { name: 'figure_one'         , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 13, unicode: '&#x1D10D;' } }, 
+	    { name: 'figure_two'         , svg: { vb: { w: 25, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D10E;' } }, 
+	    { name: 'figure_three'       , svg: { vb: { w: 35, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D10F;' } }  
 	  ],
 	  octaves: [ 
-		{ name: 'ottava_alta'        , svg: { vb: { w: 38, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D136;' } }, 
-		{ name: 'ottava_bassa'       , svg: { vb: { w: 38, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D137;' } },
-		{ name: 'quindicesima_alta'  , svg: { vb: { w: 52, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D138;' } }, 
-		{ name: 'quindicesima_bassa' , svg: { vb: { w: 52, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D139;' } }
+	    { name: 'ottava_alta'        , svg: { vb: { w: 38, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D136;' } }, 
+	    { name: 'ottava_bassa'       , svg: { vb: { w: 38, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D137;' } },
+	    { name: 'quindicesima_alta'  , svg: { vb: { w: 52, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D138;' } }, 
+	    { name: 'quindicesima_bassa' , svg: { vb: { w: 52, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D139;' } }
 	  ],
 	  rests: [ 
-		{ name: 'fermata'            , svg: { vb: { w: 30, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D110;' } }, 
-		{ name: 'fermata_below'      , svg: { vb: { w: 30, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D111;' } }, 
-		{ name: 'breath'             , svg: { vb: { w: 13, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D112;' } }, 
-		{ name: 'caesura'            , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 22, unicode: '&#x1D113;' } },
-		{ name: 'multi_rest'         , svg: { vb: { w: 10, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D13A;' } },
-		{ name: 'whole_rest'         , svg: { vb: { w: 17, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D13B;' } }, 
-		{ name: 'half_rest'          , svg: { vb: { w: 17, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D13C;' } }, 
-		{ name: 'quarter_rest'       , svg: { vb: { w: 17, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D13D;' } }, 
-		{ name: 'eighth_rest'        , svg: { vb: { w: 16, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 7 , unicode: '&#x1D13E;' } }, 
-		{ name: 'sixteenth_rest'     , svg: { vb: { w: 16, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 8 , unicode: '&#x1D13F;' } },
-		{ name: 'thirty_second_rest' , svg: { vb: { w: 18, h: 38, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D140;' } }, 
-		{ name: 'sixty_fourth_rest'  , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D141;' } },
-		{ name: '128_rest'           , svg: { vb: { w: 23, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D142;' } }
+	    { name: 'fermata'            , svg: { vb: { w: 30, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 20, unicode: '&#x1D110;' } }, 
+	    { name: 'fermata_below'      , svg: { vb: { w: 30, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D111;' } }, 
+	    { name: 'breath'             , svg: { vb: { w: 13, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D112;' } }, 
+	    { name: 'caesura'            , svg: { vb: { w: 20, h: 25, x: 0, y: 0 } } , text: { x: 3, y: 22, unicode: '&#x1D113;' } },
+	    { name: 'multi_rest'         , svg: { vb: { w: 10, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D13A;' } },
+	    { name: 'whole_rest'         , svg: { vb: { w: 17, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D13B;' } }, 
+	    { name: 'half_rest'          , svg: { vb: { w: 17, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 10, unicode: '&#x1D13C;' } }, 
+	    { name: 'quarter_rest'       , svg: { vb: { w: 17, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 15, unicode: '&#x1D13D;' } }, 
+	    { name: 'eighth_rest'        , svg: { vb: { w: 16, h: 20, x: 0, y: 0 } } , text: { x: 3, y: 7 , unicode: '&#x1D13E;' } }, 
+	    { name: 'sixteenth_rest'     , svg: { vb: { w: 16, h: 30, x: 0, y: 0 } } , text: { x: 3, y: 8 , unicode: '&#x1D13F;' } },
+	    { name: 'thirty_second_rest' , svg: { vb: { w: 18, h: 38, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D140;' } }, 
+	    { name: 'sixty_fourth_rest'  , svg: { vb: { w: 20, h: 45, x: 0, y: 0 } } , text: { x: 3, y: 17, unicode: '&#x1D141;' } },
+	    { name: '128_rest'           , svg: { vb: { w: 23, h: 55, x: 0, y: 0 } } , text: { x: 3, y: 25, unicode: '&#x1D142;' } }
 	  ],
 	  numbers: [
-        { name: 'zero' , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '0' } },
+            { name: 'zero' , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '0' } },
 	    { name: 'one'  , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '1' } },
 	    { name: 'two'  , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '2' } },
 	    { name: 'three', svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '3' } },
@@ -461,9 +461,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	    { name: 'nine' , svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '9' } },
 	    { name: 'equal', svg: { vb: { w: 15, h: 15, x: 0, y: 0 } } , text: { x: 3, y: 13 ,letter: '=' } }
 	  ]
-
-	}
-						  
+	}						  
   };
   
   this.UnitStuffs  = function(parentSvg) {
@@ -471,46 +469,46 @@ function MusicPad(targetEl, MenuWrapper) {
     var Ypos,stuffs = new Array(), multi = 9.0, Distance = 80; 					 
     var StuffWrapper = self.MainSvgPad.Children.Stuffs.el; parentSvg.insertBefore(StuffWrapper, parentSvg.firstChild); 
 																 
-	function createStuff() {
+     function createStuff() {
 	  var Stuff, newLine;
-      if (stuffs.length == 0) { 
+          if (stuffs.length == 0) { 
 	    Ypos = Distance; 
 	  } else { 
 	    Ypos = stuffs[stuffs.length-1].getAttribute('y'); 
-	  }					  
-      Ypos = parseInt(Ypos,10) + Distance;					  
-      Stuff = self.Helpers.createSvgEl({  
+          }					  
+          Ypos = parseInt(Ypos,10) + Distance;					  
+          Stuff = self.Helpers.createSvgEl({  
 	    svg_type: 'svg' ,
 		attribute_Arr: [ 
 		  { prop: 'class', val: 'stuff' }, 
 		  { prop: 'y', val: Ypos } ,
 		  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
 		]
-      }); 	   
+          }); 	   
 	  parentSvg.insertBefore(Stuff, parentSvg.firstChild);                 	                                						  
-      for (var i = 0; i < 5; i++) {                				 
+        for (var i = 0; i < 5; i++) {                				 
           newLine = self.Helpers.createSvgEl({
 	      svg_type: 'line', 
-          attribute_Arr: [ 
-			   { prop: 'class', val: 'stuff_line' } ,  
-               { prop: 'x1', val: 0 } ,  
-               { prop: 'y1', val: 1 + i * multi } ,
-               { prop: 'x2', val: self.SVGViewBox.H } ,
-               { prop: 'y2', val: 1 + i * multi } ,	
-               { prop: 'style', val: 'stroke:rgba(0,0,0,0.8);stroke-width:1.3;' } ,
-			   { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }                 																							  																								   
-           ]
-        });		   
-		 Stuff.appendChild(newLine);						   
+              attribute_Arr: [ 
+	        { prop: 'class', val: 'stuff_line' } ,  
+                { prop: 'x1', val: 0 } ,  
+                { prop: 'y1', val: 1 + i * multi } ,
+                { prop: 'x2', val: self.SVGViewBox.H } ,
+                { prop: 'y2', val: 1 + i * multi } ,	
+                { prop: 'style', val: 'stroke:rgba(0,0,0,0.8);stroke-width:1.3;' } ,
+	        { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }                 																							  																								   
+             ]
+          });		   
+	 Stuff.appendChild(newLine);						   
       }	   
-	  StuffWrapper.appendChild( Stuff );
-	  stuffs.push( Stuff );
+      StuffWrapper.appendChild( Stuff );
+      stuffs.push( Stuff );
       return Stuff;									  
-	} 
+    } 
 	
     for (var r = 0; r < 10; r++) {
 	  createStuff();
-	}
+     }
     stuffs.length = 0;       			  
   };
   
@@ -608,10 +606,8 @@ function MusicPad(targetEl, MenuWrapper) {
 							  
   };
   
-  this.getSymbol = function(symbol) {
-			 
-    var getSymbol = this;
-
+  this.getSymbol = function(symbol) {			 
+        var getSymbol = this;
 	this.DeleteIt = function () {								
 	  symbol.parentNode.removeChild(symbol);
 	  getSymbol.Symbol_KillEvents(symbol);													  
@@ -677,20 +673,17 @@ function MusicPad(targetEl, MenuWrapper) {
 																						
 	}
 								
-	this.Symbol_MouseUp = function(e) { 								                                           
+       this.Symbol_MouseUp = function(e) { 								                                           
 	  e.stopPropagation();
-	  e.preventDefault();
-											
+	  e.preventDefault();											
 	  var editSpot = self.MainSvgPad.Children.EditArea.el;
-      self.TargetSymbol.el = '';
-																			 
+          self.TargetSymbol.el = '';
+	       
 	  if (parseInt(symbol.getAttribute('y'), 10) > 100) {
 																			   
-        if (symbol.parentNode != editSpot) {
+            if (symbol.parentNode != editSpot) {
 		  if (self.Helpers.hasClass(symbol, 'quarter')) { 
-
-		    var asa = self.BeamSymbol(editSpot, 'quarter', 1, symbol.getAttribute("x"), symbol.getAttribute("y"));
-																			  
+		     var asa = self.BeamSymbol(editSpot, 'quarter', 1, symbol.getAttribute("x"), symbol.getAttribute("y"));																			  
 			self.getSymbol( symbol ).ReturnDefaultPos();
 			self.TargetSymbol.Reset();
 			return;
@@ -699,24 +692,22 @@ function MusicPad(targetEl, MenuWrapper) {
 			self.getSymbol(symbol).ReturnDefaultPos(); 
 			self.TargetSymbol.Reset();
 			return;
-		  }
-																				  
-          var newPawn = symbol.cloneNode(true);
-		  newPawn.setAttributeNS(null, 'x', self.TargetSymbol.startPos.x);
-		  newPawn.setAttributeNS(null, 'y', self.TargetSymbol.startPos.y);  
-		  newPawn.getElementsByTagName('rect')[0].setAttribute('style', 'fill:rgba(1,1,1,0.1);' );
+                  }																			  
+                 var newPawn = symbol.cloneNode(true);
+	         newPawn.setAttributeNS(null, 'x', self.TargetSymbol.startPos.x);
+	         newPawn.setAttributeNS(null, 'y', self.TargetSymbol.startPos.y);  
+	         newPawn.getElementsByTagName('rect')[0].setAttribute('style', 'fill:rgba(1,1,1,0.1);' );
 																				   
 		  self.getSymbol( newPawn ).Symbol_AddEvents();
 
 		  symbol.parentNode.appendChild(newPawn);
-          editSpot.appendChild(symbol);
-		}
-      } else { 
+                  editSpot.appendChild(symbol);
+	   }
+		  
+        } else { 
 		self.getSymbol( symbol ).ReturnDefaultPos();
-	  }
-									
-	  self.TargetSymbol.Reset();									   
-                                                                             								
+	}									
+	self.TargetSymbol.Reset();									                                                                              								
 	}
 	return this;
   };
