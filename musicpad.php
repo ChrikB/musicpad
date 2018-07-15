@@ -169,7 +169,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	Y: 0,
     W: 1000,
     H: 1000 
-  },
+  };
   this.TargetSymbol = { 
 	el: "",
 	startPos: { x: 0, y: 0 }, 
@@ -184,7 +184,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  k.scalable = k.movable = false,
 	  k.beamObj = null; 
 	}
-  },
+  };
   this.MainSvgPad = {   
     SvgPoint: '',
     MouseCoord: { x : 0 , y : 0 },
@@ -308,7 +308,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	}                                                     
 																		                		                            
 		
-  },  
+  };  
   this.Palette = {   
 
     category: {
@@ -468,7 +468,7 @@ function MusicPad(targetEl, MenuWrapper) {
 
 	}
 						  
-  },
+  };
   this.UnitStuffs  = function(parentSvg) {
 		         
     var Ypos,stuffs = new Array(),multi = 9.0,Distance = 80; 
@@ -523,7 +523,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	}
     stuffs.length = 0;
        			  
-  }
+  };
   this.AddSymbol = function(parentEl, HTMLObject, x, y) { 
 		
     var svgVB = HTMLObject.svg.vb; 
@@ -618,7 +618,7 @@ function MusicPad(targetEl, MenuWrapper) {
     }								  
 	return refSvg;
 							  
-  },
+  };
   this.getSymbol = function(symbol) {
 			 
     var getSymbol = this;
@@ -732,12 +732,12 @@ function MusicPad(targetEl, MenuWrapper) {
                                                                              								
 	}
 	return this;
-  },
+  };
   this.UnitMainSvg = function(targetEl) {		                    
     self.MainSvgPad.Create(targetEl);
 	self.MainSvgPad.SetEvents();
 	return self.MainSvgPad.El;
-  }
+  };
   this.UnitPaletteMenu = function () {
 		
     var Palettes = self.MainSvgPad.Children.Palette.el;
@@ -768,7 +768,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  
 	}
     Palettes.getElementsByTagName('svg')[0].setAttribute('visibility', 'visible');	
-  }  
+  };  
   this.UnitPalette = function(palleteFather, objectArray, clname) {
 	  
     var svgPaletteNode = self.Helpers.createSvgEl({ 
@@ -807,7 +807,7 @@ function MusicPad(targetEl, MenuWrapper) {
     }
 		
 	return svgPaletteNode;
-  },
+  };
   this.ResetSymbol = function(e) {
     e.stopPropagation();
 	e.preventDefault();
@@ -819,7 +819,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  self.TargetSymbol.Reset();
 	}
 		
-   },
+   };
    this.UnHoverBeams = function() {		
      for (var ty = 0; ty < self.Beams.length; ty ++) {
 	   for (var ta = 0; ta < 4; ta++ ) {
@@ -829,19 +829,19 @@ function MusicPad(targetEl, MenuWrapper) {
 		 self.Beams[ty].TreeObject.Points['circle' + ta].Line.Circle.Line.el.setAttribute('style', 'stroke:black;stroke-width:3;');
 		}
 	 }		
-   },
+   };
    this.cursorPoint  = function(evt, svgMain) {
 	  var pt = self.MainSvgPad.SvgPoint;
 	  pt.x = evt.clientX; pt.y = evt.clientY;
       return pt.matrixTransform(svgMain.getScreenCTM().inverse());
-   },
+   };
    this.MoveSvgIn   = function() {  	
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.movable) { 
 	    var E = self.TargetSymbol.el;
 		E.setAttribute('x', self.MainSvgPad.MouseCoord.x + self.TargetSymbol.startPos.x - self.TargetSymbol.dragPoint.x );
 		E.setAttribute('y', self.MainSvgPad.MouseCoord.y + self.TargetSymbol.startPos.y - self.TargetSymbol.dragPoint.y );
 	  }	  
-   },
+   };
    this.ScaleSvg   = function() {
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.scalable) {
 	    var SvgEl = self.TargetSymbol.el;
@@ -850,7 +850,7 @@ function MusicPad(targetEl, MenuWrapper) {
 		if( w > 0 ){ SvgEl.setAttribute('width', w); }
 		if( h > 0 ){ SvgEl.setAttribute('height', h); }
 	  }	  				
-   },	
+   };	
    this.BeamDestroy = function(beamObj) { 
 	
 	  var c1,l1,c2,l2,c3,bo,dis,index,Anchor,BeLen = self.Beams.length, FullTree = beamObj, beamObj = beamObj.TreeObject;
@@ -903,9 +903,9 @@ function MusicPad(targetEl, MenuWrapper) {
 	  }
 	  self.Beams.splice(index, 1);
 
-    },
-	this.Beams = [],
-    this.BeamSymbol = function( edit_area , SymbolPath , Direction  , MouseXcor , MouseYcor ){
+    };
+    this.Beams = [];
+    this.BeamSymbol = function(edit_area, SymbolPath, Direction, MouseXcor, MouseYcor) {
 		
 	  var EditArea = edit_area;
 
