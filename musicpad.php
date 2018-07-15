@@ -170,6 +170,7 @@ function MusicPad(targetEl, MenuWrapper) {
     W: 1000,
     H: 1000 
   };
+  
   this.TargetSymbol = { 
 	el: "",
 	startPos: { x: 0, y: 0 }, 
@@ -185,18 +186,19 @@ function MusicPad(targetEl, MenuWrapper) {
 	  k.beamObj = null; 
 	}
   };
+  
   this.MainSvgPad = {   
     SvgPoint: '',
     MouseCoord: { x : 0 , y : 0 },
-    El_tag: 'svg' ,
-	El: ''    ,
+    El_tag: 'svg',
+	El: '',
 	Attributes: [ 
 	  { prop: 'style', val: "/*width:100%;height:100%;*/display: block;position: absolute;top: 0;left: 0;width: 100%;"},
 	  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
 	],				 
 	Events: {
       mouseleave: function(evt) { 
-        self.ResetSymbol( evt ); 
+        self.ResetSymbol(evt); 
 	  },
 	  mousemove: function(evt) { 
         evt.preventDefault();
@@ -211,7 +213,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	Children: {    
 	  EditArea: { 
 	    el:'', 
-		El_tag: 'svg' , 
+		El_tag: 'svg', 
 		Attributes: [ 
 		  { prop: 'class', val: 'edit_area_svg' },
 		  { prop: 'x', val: self.SVGViewBox.X },
@@ -220,7 +222,7 @@ function MusicPad(targetEl, MenuWrapper) {
 		  { prop: 'height', val: self.SVGViewBox.H },
 		  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }																										
 	    ] 
-	  } , 
+	  }, 
 	  Palette: { 
 	    el: '', 
 		El_tag: 'svg', 
@@ -235,7 +237,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  }, 
 	  Stuffs: { 
 	    el: '', 
-		El_tag: 'svg' , 
+		El_tag: 'svg', 
 		Attributes: [ 
 		  { prop: 'class', val: 'stuffs' },
 		  { prop: 'x', val: self.SVGViewBox.X },
@@ -268,39 +270,33 @@ function MusicPad(targetEl, MenuWrapper) {
 		  }
 	    }				 
 	  } 
-	},
-	
-    Create: function(targetEl) {
-								  
-	  var viewBox = self.SVGViewBox;  
+	},	
+    Create: function(targetEl) {								  
+	  var viewBox = self.SVGViewBox;
+	  var child, a, wa;  
 	  self.MainSvgPad.El = self.Helpers.createSvgEl({ 
 	    svg_type: self.MainSvgPad.El_tag, 
 		attribute_Arr: self.MainSvgPad.Attributes
 	  });
 	  targetEl.appendChild(self.MainSvgPad.El);
 	  
-      for (var a in self.MainSvgPad.Children) {
-														  
-	    var child = self.Helpers.createSvgEl({
- 		  svg_type: self.MainSvgPad.Children[a].El_tag , 
-		  attribute_Arr: self.MainSvgPad.Children[a].Attributes
-		}); 
+      for (a in self.MainSvgPad.Children) {														  
+	      child = self.Helpers.createSvgEl({
+ 		    svg_type: self.MainSvgPad.Children[a].El_tag , 
+		    attribute_Arr: self.MainSvgPad.Children[a].Attributes
+	      }); 
 																													 
-		self.MainSvgPad.El.appendChild(child);
-		self.MainSvgPad.Children[a].el = child;
+		  self.MainSvgPad.El.appendChild(child);
+		  self.MainSvgPad.Children[a].el = child;
 																			   
-		if (self.MainSvgPad.Children[a].hasOwnProperty('Events')) {
-		  for (var wa in self.MainSvgPad.Children[a].Events) {
-		    child.addEventListener(wa, self.MainSvgPad.Children[a].Events[wa], false);
+		  if (self.MainSvgPad.Children[a].hasOwnProperty('Events')) {
+		    for (wa in self.MainSvgPad.Children[a].Events) {
+		      child.addEventListener(wa, self.MainSvgPad.Children[a].Events[wa], false);
+		    }
 		  }
-		}
-		
 	  }
-								   
-
 	  self.MainSvgPad.SvgPoint  = self.MainSvgPad.El.createSVGPoint();								                                         
-	},
-	
+	},	
 	SetEvents: function () {								  
 	  self.MainSvgPad.El.addEventListener('mousemove', this.Events.mousemove, false );
 	  self.MainSvgPad.El.addEventListener('mouseup', this.Events.mouseup, false );
@@ -308,9 +304,9 @@ function MusicPad(targetEl, MenuWrapper) {
 	}                                                     
 																		                		                            
 		
-  };  
+  };
+  
   this.Palette = {   
-
     category: {
 	  notes: [ 
 	    { name: 'double_whole'       , svg: { vb: { w: 23, h: 20, x: 0, y: 0 } } , text: { x: 0, y: 10, unicode: '&#x1D15C;' }                           }, 
@@ -469,38 +465,33 @@ function MusicPad(targetEl, MenuWrapper) {
 	}
 						  
   };
+  
   this.UnitStuffs  = function(parentSvg) {
 		         
-    var Ypos,stuffs = new Array(),multi = 9.0,Distance = 80; 
-					 
-    var StuffWrapper = self.MainSvgPad.Children.Stuffs.el; parentSvg.insertBefore( StuffWrapper , parentSvg.firstChild ); 
+    var Ypos,stuffs = new Array(), multi = 9.0, Distance = 80; 					 
+    var StuffWrapper = self.MainSvgPad.Children.Stuffs.el; parentSvg.insertBefore(StuffWrapper, parentSvg.firstChild); 
 																 
 	function createStuff() {
-					  
+	  var Stuff, newLine;
       if (stuffs.length == 0) { 
 	    Ypos = Distance; 
 	  } else { 
 	    Ypos = stuffs[stuffs.length-1].getAttribute('y'); 
 	  }					  
-      Ypos = parseInt(Ypos,10) + Distance;
-					  
-      var Stuff = self.Helpers.createSvgEl({  
+      Ypos = parseInt(Ypos,10) + Distance;					  
+      Stuff = self.Helpers.createSvgEl({  
 	    svg_type: 'svg' ,
 		attribute_Arr: [ 
 		  { prop: 'class', val: 'stuff' }, 
 		  { prop: 'y', val: Ypos } ,
 		  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
 		]
-       }); 
-	   
-	   parentSvg.insertBefore(Stuff, parentSvg.firstChild); 
-                 	                
-                 						  
-       for (var i = 0; i < 5; i++) {
-                 				 
-         var newLine = self.Helpers.createSvgEl({
-			 svg_type: 'line', 
-             attribute_Arr: [ 
+      }); 	   
+	  parentSvg.insertBefore(Stuff, parentSvg.firstChild);                 	                                						  
+      for (var i = 0; i < 5; i++) {                				 
+          newLine = self.Helpers.createSvgEl({
+	      svg_type: 'line', 
+          attribute_Arr: [ 
 			   { prop: 'class', val: 'stuff_line' } ,  
                { prop: 'x1', val: 0 } ,  
                { prop: 'y1', val: 1 + i * multi } ,
@@ -508,27 +499,24 @@ function MusicPad(targetEl, MenuWrapper) {
                { prop: 'y2', val: 1 + i * multi } ,	
                { prop: 'style', val: 'stroke:rgba(0,0,0,0.8);stroke-width:1.3;' } ,
 			   { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }                 																							  																								   
-             ]
-           });
-		   
-		   Stuff.appendChild(newLine);						   
-       }
-	   
-	   StuffWrapper.appendChild( Stuff );
-	   stuffs.push( Stuff );
-       return Stuff;									  
-	}  
+           ]
+        });		   
+		 Stuff.appendChild(newLine);						   
+      }	   
+	  StuffWrapper.appendChild( Stuff );
+	  stuffs.push( Stuff );
+      return Stuff;									  
+	} 
+	
     for (var r = 0; r < 10; r++) {
 	  createStuff();
 	}
-    stuffs.length = 0;
-       			  
+    stuffs.length = 0;       			  
   };
-  this.AddSymbol = function(parentEl, HTMLObject, x, y) { 
-		
+  
+  this.AddSymbol = function(parentEl, HTMLObject, x, y) { 		
     var svgVB = HTMLObject.svg.vb; 
-	var svgVBw = svgVB.w || 0,svgVBh = svgVB.h || 0,svgVBx = svgVB.x || 0,svgVBy = svgVB.y || 0;
-		                          								 
+	var svgVBw = svgVB.w || 0,svgVBh = svgVB.h || 0,svgVBx = svgVB.x || 0,svgVBy = svgVB.y || 0;		                          								 
 	var refSvg = self.Helpers.createSvgEl({ 
 	  svg_type: 'svg' , 
 	  attribute_Arr: [ 
@@ -619,6 +607,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	return refSvg;
 							  
   };
+  
   this.getSymbol = function(symbol) {
 			 
     var getSymbol = this;
@@ -733,11 +722,13 @@ function MusicPad(targetEl, MenuWrapper) {
 	}
 	return this;
   };
+  
   this.UnitMainSvg = function(targetEl) {		                    
     self.MainSvgPad.Create(targetEl);
 	self.MainSvgPad.SetEvents();
 	return self.MainSvgPad.El;
   };
+  
   this.UnitPaletteMenu = function () {
 		
     var Palettes = self.MainSvgPad.Children.Palette.el;
@@ -768,7 +759,8 @@ function MusicPad(targetEl, MenuWrapper) {
 	  
 	}
     Palettes.getElementsByTagName('svg')[0].setAttribute('visibility', 'visible');	
-  };  
+  };
+  
   this.UnitPalette = function(palleteFather, objectArray, clname) {
 	  
     var svgPaletteNode = self.Helpers.createSvgEl({ 
@@ -787,8 +779,7 @@ function MusicPad(targetEl, MenuWrapper) {
 
     for (var k = 0; k < Sunit.length; k++) {
 		
-      (function(idx){ 
-	  
+      (function(idx){ 	  
         if (previous != null) { 
 		  var xX = parseInt( previous.getAttribute('width') , 10 ) + parseInt( previous.getAttribute('x') , 10 )+2; 
 		} else { var xX = 0; }
@@ -801,13 +792,14 @@ function MusicPad(targetEl, MenuWrapper) {
 		var refSvg = self.AddSymbol(svgPaletteNode, Sunit[idx], xX + StartXPoing, 30); 
 		self.Helpers.addClass(refSvg, clname);  
 		self.getSymbol(refSvg).Symbol_AddEvents();
-		previous =  refSvg;
-									   
+		previous =  refSvg;									   
 	  })(k)
+	  
     }
 		
 	return svgPaletteNode;
   };
+  
   this.ResetSymbol = function(e) {
     e.stopPropagation();
 	e.preventDefault();
@@ -819,8 +811,9 @@ function MusicPad(targetEl, MenuWrapper) {
 	  self.TargetSymbol.Reset();
 	}
 		
-   };
-   this.UnHoverBeams = function() {		
+  };
+  
+  this.UnHoverBeams = function() {		
      for (var ty = 0; ty < self.Beams.length; ty ++) {
 	   for (var ta = 0; ta < 4; ta++ ) {
 	     self.Beams[ty].TreeObject.Points['circle' + ta].Line.Circle.el.setAttribute('r', 0);
@@ -829,20 +822,23 @@ function MusicPad(targetEl, MenuWrapper) {
 		 self.Beams[ty].TreeObject.Points['circle' + ta].Line.Circle.Line.el.setAttribute('style', 'stroke:black;stroke-width:3;');
 		}
 	 }		
-   };
-   this.cursorPoint  = function(evt, svgMain) {
+  };
+  
+  this.cursorPoint  = function(evt, svgMain) {
 	  var pt = self.MainSvgPad.SvgPoint;
 	  pt.x = evt.clientX; pt.y = evt.clientY;
       return pt.matrixTransform(svgMain.getScreenCTM().inverse());
-   };
-   this.MoveSvgIn   = function() {  	
+  };
+  
+  this.MoveSvgIn   = function() {  	
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.movable) { 
 	    var E = self.TargetSymbol.el;
 		E.setAttribute('x', self.MainSvgPad.MouseCoord.x + self.TargetSymbol.startPos.x - self.TargetSymbol.dragPoint.x );
 		E.setAttribute('y', self.MainSvgPad.MouseCoord.y + self.TargetSymbol.startPos.y - self.TargetSymbol.dragPoint.y );
 	  }	  
-   };
-   this.ScaleSvg   = function() {
+  };
+  
+  this.ScaleSvg   = function() {
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.scalable) {
 	    var SvgEl = self.TargetSymbol.el;
 		var w = self.loc.x -self.StartX + self.StartW ;
@@ -850,8 +846,9 @@ function MusicPad(targetEl, MenuWrapper) {
 		if( w > 0 ){ SvgEl.setAttribute('width', w); }
 		if( h > 0 ){ SvgEl.setAttribute('height', h); }
 	  }	  				
-   };	
-   this.BeamDestroy = function(beamObj) { 
+  };
+  
+  this.BeamDestroy = function(beamObj) { 
 	
 	  var c1,l1,c2,l2,c3,bo,dis,index,Anchor,BeLen = self.Beams.length, FullTree = beamObj, beamObj = beamObj.TreeObject;
 	  for ( var m = 0; m < BeLen; m++) { 
@@ -903,9 +900,11 @@ function MusicPad(targetEl, MenuWrapper) {
 	  }
 	  self.Beams.splice(index, 1);
 
-    };
-    this.Beams = [];
-    this.BeamSymbol = function(edit_area, SymbolPath, Direction, MouseXcor, MouseYcor) {
+  };
+  
+  this.Beams = [];
+  
+  this.BeamSymbol = function(edit_area, SymbolPath, Direction, MouseXcor, MouseYcor) {
 		
 	  var EditArea = edit_area;
 
@@ -1402,13 +1401,12 @@ function MusicPad(targetEl, MenuWrapper) {
 				
 	  return NoteObject;
 				   
-	}
+  }
 		
+  var mainS = self.UnitMainSvg(targetEl); 
 
-    var mainS = self.UnitMainSvg(targetEl); 
-
-    self.UnitPaletteMenu();
-    self.UnitStuffs(mainS);												
+  self.UnitPaletteMenu();
+  self.UnitStuffs(mainS);												
 }					  
 
 
