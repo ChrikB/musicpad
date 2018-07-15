@@ -188,9 +188,9 @@ function MusicPad(targetEl, MenuWrapper) {
   this.MainSvgPad = {   
     SvgPoint: '',
     MouseCoord: { x : 0 , y : 0 },
-    El_tag     : 'svg' ,
-	El         : ''    ,
-	Attributes : [ 
+    El_tag: 'svg' ,
+	El: ''    ,
+	Attributes: [ 
 	  { prop: 'style', val: "/*width:100%;height:100%;*/display: block;position: absolute;top: 0;left: 0;width: 100%;"},
 	  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
 	],				 
@@ -211,8 +211,8 @@ function MusicPad(targetEl, MenuWrapper) {
 	Children: {    
 	  EditArea: { 
 	    el:'', 
-		El_tag : 'svg' , 
-		Attributes : [ 
+		El_tag: 'svg' , 
+		Attributes: [ 
 		  { prop: 'class', val: 'edit_area_svg' },
 		  { prop: 'x', val: self.SVGViewBox.X },
  		  { prop: 'y', val: self.SVGViewBox.Y },
@@ -254,7 +254,7 @@ function MusicPad(targetEl, MenuWrapper) {
 		  { prop: 'transform', val: 'translate(60, -479)'  }
 		],
         Events: {
-	      mouseover : function(evt) { 
+	      mouseover: function(evt) { 
 		    if (self.TargetSymbol.beamObje != null) {
 		      self.BeamDestroy(self.TargetSymbol.beamObje);
 			  self.TargetSymbol.beamObje = null;
@@ -308,8 +308,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	}                                                     
 																		                		                            
 		
-  },
-  
+  },  
   this.Palette = {   
 
     category: {
