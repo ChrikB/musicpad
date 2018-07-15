@@ -167,8 +167,8 @@ function MusicPad(targetEl, MenuWrapper) {
   this.SVGViewBox = { 
     X: 0,
 	Y: 0,
-	W: 1000,
-	H: 1000 
+    W: 1000,
+    H: 1000 
   },
   this.TargetSymbol = { 
 	el: "",
