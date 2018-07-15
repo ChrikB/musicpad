@@ -248,13 +248,13 @@ function MusicPad(targetEl, MenuWrapper) {
 	  }, 
 	  Thrash: { 
 	    el:'', 
-		El_tag : 'path', 
-		Attributes : [ 
-	      { prop: 'd', val: "M902.00,481 C902.00,481 901.50,481 901.5,482 C901.5,483 902.00,483 902.00,483 L919.99,483 C919.99,483 920.5,483 920.5,482 C920.5,481 919.99,481 919.99,481 L902.00,481 L902.00,481 Z M902.47,484 L919.47,484 L917.47,502 L904.47,502 L902.47,484 Z M909.47,480 C908.47,480 908.47,481 908.47,481 L913.47,481 C913.47,481 913.47,480 912.47,480 L909.47,480 L909.47,480 Z M907.47,500 L908.47,500 L907.47,483.96 L906.47,483.96 L907.47,500 Z M914.47,483.96 L913.47,500 L914.47,500 L915.47,483.96 L914.47,483.96 L914.47,483.96 Z M910.47,483.96 L910.47,500 L911.47,500 L911.47,483.96 L910.47,483.96 L910.47,483.96 Z"},
+		El_tag: 'path', 
+		Attributes: [ 
+          { prop: 'd', val: "M902.00,481 C902.00,481 901.50,481 901.5,482 C901.5,483 902.00,483 902.00,483 L919.99,483 C919.99,483 920.5,483 920.5,482 C920.5,481 919.99,481 919.99,481 L902.00,481 L902.00,481 Z M902.47,484 L919.47,484 L917.47,502 L904.47,502 L902.47,484 Z M909.47,480 C908.47,480 908.47,481 908.47,481 L913.47,481 C913.47,481 913.47,480 912.47,480 L909.47,480 L909.47,480 Z M907.47,500 L908.47,500 L907.47,483.96 L906.47,483.96 L907.47,500 Z M914.47,483.96 L913.47,500 L914.47,500 L915.47,483.96 L914.47,483.96 L914.47,483.96 Z M910.47,483.96 L910.47,500 L911.47,500 L911.47,483.96 L910.47,483.96 L910.47,483.96 Z"},
           { prop: 'class', val: 'thrash_bin' },
 		  { prop: 'transform', val: 'translate(60, -479)'  }
 		],
-	    Events: {
+        Events: {
 	      mouseover : function(evt) { 
 		    if (self.TargetSymbol.beamObje != null) {
 		      self.BeamDestroy(self.TargetSymbol.beamObje);
@@ -271,7 +271,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  } 
 	},
 	
-	Create: function(targetEl) {
+    Create: function(targetEl) {
 								  
 	  var viewBox = self.SVGViewBox;  
 	  self.MainSvgPad.El = self.Helpers.createSvgEl({ 
@@ -831,20 +831,20 @@ function MusicPad(targetEl, MenuWrapper) {
 		 self.Beams[ty].TreeObject.Points['circle' + ta].Line.Circle.Line.el.setAttribute('style', 'stroke:black;stroke-width:3;');
 		}
 	 }		
-	},
-	this.cursorPoint  = function(evt, svgMain) {
+   },
+   this.cursorPoint  = function(evt, svgMain) {
 	  var pt = self.MainSvgPad.SvgPoint;
 	  pt.x = evt.clientX; pt.y = evt.clientY;
       return pt.matrixTransform(svgMain.getScreenCTM().inverse());
-	},
-    this.MoveSvgIn   = function() {  	
+   },
+   this.MoveSvgIn   = function() {  	
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.movable) { 
 	    var E = self.TargetSymbol.el;
 		E.setAttribute('x', self.MainSvgPad.MouseCoord.x + self.TargetSymbol.startPos.x - self.TargetSymbol.dragPoint.x );
 		E.setAttribute('y', self.MainSvgPad.MouseCoord.y + self.TargetSymbol.startPos.y - self.TargetSymbol.dragPoint.y );
 	  }	  
-	},
-	this.ScaleSvg   = function() {
+   },
+   this.ScaleSvg   = function() {
 	  if (self.TargetSymbol.el != '' && self.TargetSymbol.scalable) {
 	    var SvgEl = self.TargetSymbol.el;
 		var w = self.loc.x -self.StartX + self.StartW ;
@@ -852,9 +852,8 @@ function MusicPad(targetEl, MenuWrapper) {
 		if( w > 0 ){ SvgEl.setAttribute('width', w); }
 		if( h > 0 ){ SvgEl.setAttribute('height', h); }
 	  }	  				
-	},
-	
-	this.BeamDestroy = function(beamObj) { 
+   },	
+   this.BeamDestroy = function(beamObj) { 
 	
 	  var c1,l1,c2,l2,c3,bo,dis,index,Anchor,BeLen = self.Beams.length, FullTree = beamObj, beamObj = beamObj.TreeObject;
 	  for ( var m = 0; m < BeLen; m++) { 
@@ -906,7 +905,7 @@ function MusicPad(targetEl, MenuWrapper) {
 	  }
 	  self.Beams.splice(index, 1);
 
-	},
+    },
 	this.Beams = [],
     this.BeamSymbol = function( edit_area , SymbolPath , Direction  , MouseXcor , MouseYcor ){
 		
