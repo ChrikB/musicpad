@@ -189,30 +189,30 @@ function MusicPad(targetEl, MenuWrapper) {
   
   this.MainSvgPad = {   
     SvgPoint: '',
-    MouseCoord: { x : 0 , y : 0 },
+    MouseCoord: { x: 0, y: 0 },
     El_tag: 'svg',
 	El: '',
 	Attributes: [ 
-	  { prop: 'style', val: "/*width:100%;height:100%;*/display: block;position: absolute;top: 0;left: 0;width: 100%;"},
+	  { prop: 'style', val: "/*width:100%;height:100%;*/display: block;position: absolute;top: 0;left: 0;width: 100%;" },
 	  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
 	],				 
 	Events: {
       mouseleave: function(evt) { 
         self.ResetSymbol(evt); 
 	  },
-	  mousemove: function(evt) { 
+      mousemove: function(evt) { 
         evt.preventDefault();
         self.MainSvgPad.MouseCoord = self.cursorPoint(evt,self.MainSvgPad.El); 
         self.MoveSvgIn();
         self.ScaleSvg();
-	  },
-	  mouseup: function(evt) { 
-	    self.ResetSymbol(evt); 
-	  }
+      },
+      mouseup: function(evt) { 
+        self.ResetSymbol(evt); 
+      }
 	},	
 	Children: {    
 	  EditArea: { 
-	    el:'', 
+	    el: '', 
 		El_tag: 'svg', 
 		Attributes: [ 
 		  { prop: 'class', val: 'edit_area_svg' },
@@ -248,7 +248,7 @@ function MusicPad(targetEl, MenuWrapper) {
 		] 
 	  }, 
 	  Thrash: { 
-	    el:'', 
+	    el: '', 
 		El_tag: 'path', 
 		Attributes: [ 
           { prop: 'd', val: "M902.00,481 C902.00,481 901.50,481 901.5,482 C901.5,483 902.00,483 902.00,483 L919.99,483 C919.99,483 920.5,483 920.5,482 C920.5,481 919.99,481 919.99,481 L902.00,481 L902.00,481 Z M902.47,484 L919.47,484 L917.47,502 L904.47,502 L902.47,484 Z M909.47,480 C908.47,480 908.47,481 908.47,481 L913.47,481 C913.47,481 913.47,480 912.47,480 L909.47,480 L909.47,480 Z M907.47,500 L908.47,500 L907.47,483.96 L906.47,483.96 L907.47,500 Z M914.47,483.96 L913.47,500 L914.47,500 L915.47,483.96 L914.47,483.96 L914.47,483.96 Z M910.47,483.96 L910.47,500 L911.47,500 L911.47,483.96 L910.47,483.96 L910.47,483.96 Z"},
@@ -256,7 +256,7 @@ function MusicPad(targetEl, MenuWrapper) {
 		  { prop: 'transform', val: 'translate(60, -479)'  }
 		],
         Events: {
-	      mouseover: function(evt) { 
+          mouseover: function(evt) { 
 		    if (self.TargetSymbol.beamObje != null) {
 		      self.BeamDestroy(self.TargetSymbol.beamObje);
 			  self.TargetSymbol.beamObje = null;
@@ -612,11 +612,9 @@ function MusicPad(targetEl, MenuWrapper) {
 			 
     var getSymbol = this;
 
-	this.DeleteIt = function () {
-								
+	this.DeleteIt = function () {								
 	  symbol.parentNode.removeChild(symbol);
-	  getSymbol.Symbol_KillEvents(symbol);
-													  
+	  getSymbol.Symbol_KillEvents(symbol);													  
 	},
 	this.ReturnDefaultPos  = function () {								
 	  symbol.setAttribute("x", self.TargetSymbol.startPos.x);
