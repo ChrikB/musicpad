@@ -166,35 +166,35 @@ function MusicPad(targetEl, MenuWrapper) {
 	
   this.SVGViewBox = { 
     X: 0,
-	Y: 0,
-	W: 1000,
-	H: 1000 
+    Y: 0,
+    W: 1000,
+    H: 1000 
   },
   this.TargetSymbol = { 
-	el: "",
-	startPos: { x: 0, y: 0 }, 
-	scalable: false,
-	movable: false,
-	beamObje: null,
-	dragPoint: { x : 0 , y : 0 },
+    el: "",
+    startPos: { x: 0, y: 0 }, 
+    scalable: false,
+    movable: false,
+    beamObje: null,
+    dragPoint: { x : 0 , y : 0 },
     Reset: function () { 
 	  var k = this;
 	  k.el = "",
 	  k.startPos.x = k.startPos.y = k.dragPoint.x = k.dragPoint.y = 0,
 	  k.scalable = k.movable = false,
 	  k.beamObj = null; 
-	}
+    }
   },
   this.MainSvgPad = {   
     SvgPoint: '',
-	MouseCoord: { x : 0 , y : 0 },
-	El_tag     : 'svg' ,
-	El         : ''    ,
-	Attributes : [ 
+    MouseCoord: { x : 0 , y : 0 },
+    El_tag: 'svg' ,
+    El: ''    ,
+    Attributes: [ 
 	  { prop: 'style', val: "/*width:100%;height:100%;*/display: block;position: absolute;top: 0;left: 0;width: 100%;"},
 	  { prop: 'viewBox', val: self.SVGViewBox.X + ' ' + self.SVGViewBox.Y + ' ' + self.SVGViewBox.W + ' ' + self.SVGViewBox.H }
-	],				 
-	Events: {
+    ],				 
+    Events: {
 	  mouseleave: function(evt) { 
 	    self.ResetSymbol( evt ); 
 	  },
